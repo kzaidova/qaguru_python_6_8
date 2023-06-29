@@ -77,6 +77,9 @@ class TestCart:
         cart.remove_product(sudoku, 5)
         assert cart.products[sudoku] == 5
 
+        cart.remove_product(sudoku, 5)
+        assert sudoku not in cart.products.keys()
+
         cart.remove_product(magazine, 9)
         assert magazine not in cart.products.keys()
 
